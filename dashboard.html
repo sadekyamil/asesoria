@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de 8 Tarjetas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para las tarjetas */
+        .tarjeta {
+            @apply bg-white rounded-lg shadow-md flex items-center justify-center text-gray-800 font-semibold text-xl;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+            height: 100%; /* Asegura que la tarjeta se expanda dentro de su contenedor */
+        }
+
+        .tarjeta:hover {
+            @apply transform:scale-105 shadow-lg;
+        }
+
+        .tarjeta-1 { background-color: #f0fdf4; color: #065f46; }
+        .tarjeta-2 { background-color: #fef2f2; color: #b91c1c; }
+        .tarjeta-3 { background-color: #fff7ed; color: #9a3412; }
+        .tarjeta-4 { background-color: #eff6ff; color: #1e40af; }
+        .tarjeta-5 { background-color: #f0f9ff; color: #0e7490; }
+        .tarjeta-6 { background-color: #f5f5f5; color: #4b5563; }
+        .tarjeta-7 { background-color: #dcfce7; color: #15803d; }
+        .tarjeta-8 { background-color: #fee2e2; color: #991b1b; }
+
+        .tarjeta-1:hover { background-color: #e6f4e5; }
+        .tarjeta-2:hover { background-color: #fee2e2; }
+        .tarjeta-3:hover { background-color: #ffe5d9; }
+        .tarjeta-4:hover { background-color: #dbe4ff; }
+        .tarjeta-5:hover { background-color: #e0f2fe; }
+        .tarjeta-6:hover { background-color: #f3f4f6; }
+        .tarjeta-7:hover { background-color: #c6f6d5; }
+        .tarjeta-8:hover { background-color: #fecaca; }
+
+        .contenedor-tarjetas {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+            justify-content: space-around; /* Distribuye las tarjetas equitativamente horizontalmente */
+        }
+
+        .tarjeta {
+            width: 48%; /* Para dos columnas en pantallas pequeñas */
+            margin-bottom: 10px; /* Espacio entre las tarjetas */
+        }
+
+        @media (min-width: 768px) {
+            .tarjeta {
+                width: 23%; /* Para cuatro columnas en pantallas medianas y grandes */
+                margin-bottom: 0; /* Elimina el margen inferior en pantallas más grandes */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <div class="contenedor-tarjetas">
+        <div class="tarjeta tarjeta-1" onclick="mostrarMensaje(1)">Tarjeta 1</div>
+        <div class="tarjeta tarjeta-2" onclick="mostrarMensaje(2)">Tarjeta 2</div>
+        <div class="tarjeta tarjeta-3" onclick="mostrarMensaje(3)">Tarjeta 3</div>
+        <div class="tarjeta tarjeta-4" onclick="mostrarMensaje(4)">Tarjeta 4</div>
+        <div class="tarjeta tarjeta-5" onclick="mostrarMensaje(5)">Tarjeta 5</div>
+        <div class="tarjeta tarjeta-6" onclick="mostrarMensaje(6)">Tarjeta 6</div>
+        <div class="tarjeta tarjeta-7" onclick="mostrarMensaje(7)">Tarjeta 7</div>
+        <div class="tarjeta tarjeta-8" onclick="mostrarMensaje(8)">Tarjeta 8</div>
+    </div>
+
+    <script>
+        function mostrarMensaje(numeroTarjeta) {
+            alert(`¡Clic en la Tarjeta ${numeroTarjeta}!`);
+        }
+    </script>
+</body>
+</html>
