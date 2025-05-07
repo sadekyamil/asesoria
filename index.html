@@ -10,33 +10,18 @@
         /* Estilos personalizados para las tarjetas */
         .tarjeta {
             @apply bg-white rounded-lg shadow-md flex items-center justify-center text-gray-800 font-semibold text-xl;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease; /* Añadida transición para el color de fondo */
             cursor: pointer;
-            height: 50vh; /* Asegura que la tarjeta se expanda dentro de su contenedor */
+            height: 50vh;
             width: 25vw;
+            color: black;
         }
 
         .tarjeta:hover {
             @apply transform:scale-105 shadow-lg;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con 70% de opacidad */
+            color: white; /* Cambia el color del texto a blanco al hacer hover */
         }
-
-        .tarjeta-1 { background-color: #f0fdf4; color: #065f46; }
-        .tarjeta-2 { background-color: #fef2f2; color: #b91c1c; }
-        .tarjeta-3 { background-color: #fff7ed; color: #9a3412; }
-        .tarjeta-4 { background-color: #eff6ff; color: #1e40af; }
-        .tarjeta-5 { background-color: #f0f9ff; color: #0e7490; }
-        .tarjeta-6 { background-color: #f5f5f5; color: #4b5563; }
-        .tarjeta-7 { background-color: #dcfce7; color: #15803d; }
-        .tarjeta-8 { background-color: #fee2e2; color: #991b1b; }
-
-        .tarjeta-1:hover { background-color: #e6f4e5; }
-        .tarjeta-2:hover { background-color: #fee2e2; }
-        .tarjeta-3:hover { background-color: #ffe5d9; }
-        .tarjeta-4:hover { background-color: #dbe4ff; }
-        .tarjeta-5:hover { background-color: #e0f2fe; }
-        .tarjeta-6:hover { background-color: #f3f4f6; }
-        .tarjeta-7:hover { background-color: #c6f6d5; }
-        .tarjeta-8:hover { background-color: #fecaca; }
 
         .contenedor-tarjetas {
             height: 100vh;
@@ -44,7 +29,7 @@
             display: flex;
             flex-wrap: wrap;
             align-content: stretch;
-            justify-content: space-around; /* Distribuye las tarjetas equitativamente horizontalmente */
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -62,8 +47,8 @@
 
     <script>
         function redirigir(pagina) {
-  window.location.href = pagina;
-}
+            window.location.href = pagina;
+        }
     </script>
 </body>
 </html>
