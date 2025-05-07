@@ -12,7 +12,8 @@
             @apply bg-white rounded-lg shadow-md flex items-center justify-center text-gray-800 font-semibold text-xl;
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             cursor: pointer;
-            height: 100%; /* Asegura que la tarjeta se expanda dentro de su contenedor */
+            height: 50vh; /* Asegura que la tarjeta se expanda dentro de su contenedor */
+            width: 25vw;
         }
 
         .tarjeta:hover {
@@ -44,18 +45,6 @@
             flex-wrap: wrap;
             align-content: stretch;
             justify-content: space-around; /* Distribuye las tarjetas equitativamente horizontalmente */
-        }
-
-        .tarjeta {
-            width: 48%; /* Para dos columnas en pantallas pequeñas */
-            margin-bottom: 10px; /* Espacio entre las tarjetas */
-        }
-
-        @media (min-width: 768px) {
-            .tarjeta {
-                width: 23%; /* Para cuatro columnas en pantallas medianas y grandes */
-                margin-bottom: 0; /* Elimina el margen inferior en pantallas más grandes */
-            }
         }
     </style>
 </head>
