@@ -10,17 +10,19 @@
         /* Estilos personalizados para las tarjetas */
         .tarjeta {
             @apply bg-white rounded-lg shadow-md flex items-center justify-center text-gray-800 font-semibold text-xl;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease; /* Añadida transición para el color de fondo */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease; /* Transiciones mejoradas */
             cursor: pointer;
             height: 50vh;
             width: 25vw;
             color: black;
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Añade un borde sutil */
         }
 
         .tarjeta:hover {
-            @apply transform:scale-105 shadow-lg;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con 70% de opacidad */
-            color: white; /* Cambia el color del texto a blanco al hacer hover */
+            @apply transform:scale-103 shadow-lg; /* Reduce un poco el scale para un efecto más sutil */
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con 80% de opacidad - un poco más opaco */
+            color: white;
+            border-color: rgba(255, 255, 255, 0.2); /* Cambia el color del borde en hover */
         }
 
         .contenedor-tarjetas {
@@ -31,9 +33,13 @@
             align-content: stretch;
             justify-content: space-around;
         }
+
+        body {
+            background-color: #f9f9f9; /* Cambia el color de fondo del body para un contraste suave */
+        }
     </style>
 </head>
-<body class="bg-gray-100 font-sans antialiased">
+<body class="font-sans antialiased">
     <div class="contenedor-tarjetas">
         <div class="tarjeta tarjeta-1" onclick="redirigir('youtube.html')">Tarjeta 1</div>
         <div class="tarjeta tarjeta-2" onclick="redirigir('youtube.html')">Tarjeta 2</div>
