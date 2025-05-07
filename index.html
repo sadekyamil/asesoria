@@ -11,103 +11,92 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Color de texto blanco */
         }
         /* Estilos personalizados para los botones */
         .paso-btn {
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con ligera transparencia */
-            color: #4a5568; /* Color de texto gris oscuro */
-            border-radius: 1.5rem; /* Radio de borde completamente redondeado */
-            padding: 0.8rem 2rem; /* Relleno horizontal y vertical aumentado ligeramente*/
-            font-weight: 500; /* Peso de la fuente normal */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra suave y elevada */
-            transition: all 0.3s ease-in-out; /* Transición suave para todas las propiedades */
-            border: none; /* Eliminar el borde */
-            backdrop-filter: blur(12px); /* Aumentar el desenfoque */
-            font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Añadir una ligera sombra de texto */
+            background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con ligera transparencia */
+            color: #fff; /* Color de texto blanco */
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Borde blanco muy suave */
+            backdrop-filter: blur(10px);
+            font-size: 1rem;
         }
 
         .paso-btn:hover {
-            background-color: rgba(255, 255, 255, 1); /* Fondo blanco al hacer hover */
-            color: #2d3748; /* Color de texto más oscuro al hacer hover */
-            transform: translateY(-4px); /* Elevar el botón al hacer hover */
-            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+            background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco ligeramente más opaco al hacer hover */
+            color: #fff;
         }
 
         .paso-btn.active {
-            background-color: #4a5568; /* Fondo gris oscuro para el botón activo */
-            color: white; /* Color de texto blanco para el botón activo */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte para el botón activo */
-        }
-
-        .paso-btn.active:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+            background-color: #fff; /* Fondo blanco para el botón activo */
+            color: #000; /* Color de texto negro para el botón activo */
         }
 
         #contenido-paso {
-            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con más transparencia para el contenido */
-            border-radius: 1.5rem; /* Radio de borde completamente redondeado */
-            padding: 3rem; /* Relleno más grande para el contenido */
-            margin-top: 3rem; /* Margen superior aumentado para separar de los botones */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra suave y elevada */
-            backdrop-filter: blur(12px);
-            border: none; /* Eliminar borde */
+            background-color: rgba(255, 255, 255, 0.05); /* Fondo blanco muy transparente */
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borde blanco muy suave */
         }
 
         #contenido-paso h2 {
-            color: #2d3748; /* Color de título más oscuro */
-            font-size: 2.25rem; /* Tamaño de fuente más grande */
-            font-weight: 600; /* Peso de fuente semi-negrita */
-            margin-bottom: 2rem; /* Más margen inferior */
-            letter-spacing: -0.02em; /* Espaciado de letras ligeramente más estrecho */
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
         }
 
         #contenido-paso p {
-            color: #4a5568; /* Color de texto gris un poco más oscuro */
-            line-height: 1.85; /* Espaciado entre líneas aumentado para mejor legibilidad */
-            font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
+            color: #fff;
+            line-height: 1.7;
+            font-size: 1rem;
         }
 
         #contenido-paso ul {
-            margin-top: 1.5rem; /* Aumentar el margen superior de la lista */
-            margin-left: 2.5rem; /* Aumentar el margen izquierdo de la lista */
-            list-style: none; /* Eliminar los puntos de la lista */
+            margin-top: 1rem;
+            margin-left: 2rem;
+            list-style: none;
         }
 
         #contenido-paso li {
-            color: #4a5568;
-            margin-bottom: 0.75rem; /* Espaciado aumentado entre elementos de la lista */
-            padding-left: 0.5rem; /* Añadir relleno izquierdo para alinear con el texto */
-            border-left: 2px solid #a0aec0; /* Añadir una línea vertical como indicador */
+            color: #fff;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #fff; /* Línea blanca */
         }
 
         #contenido-paso li strong {
-            color: #2d3748; /* Resaltar el texto en negrita */
+            color: #fff;
         }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 flex justify-center items-center min-h-screen py-8 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1531482615713-74a1a7e5b744?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+<body class="bg-black text-white flex justify-center items-center min-h-screen py-8 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1531482615713-74a1a7e5b744?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
     <div class="max-w-3xl w-full">
-        <div class="bg-white/70 dark:bg-gray-800/70 rounded-3xl shadow-2xl p-10 backdrop-blur-md border border-white/10 dark:border-gray-700">
-            <div class="flex justify-center gap-6 mb-8">
+        <div class="bg-black/70 rounded-lg shadow-md p-8 backdrop-blur-md border border-white/10">
+            <div class="flex justify-center gap-4 mb-6">
                 <button class="paso-btn" data-paso="1">Paso 1</button>
                 <button class="paso-btn" data-paso="2">Paso 2</button>
                 <button class="paso-btn" data-paso="3">Paso 3</button>
                 <button class="paso-btn" data-paso="4">Paso 4</button>
             </div>
             <div id="contenido-paso">
-                <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Paso 1: Define tu Objetivo</h2>
-                <p class="text-gray-700 dark:text-gray-300">
+                <h2 class="text-xl font-semibold text-white mb-4">Paso 1: Define tu Objetivo</h2>
+                <p class="text-gray-300">
                     El primer paso para alcanzar cualquier objetivo es definirlo claramente.  ¿Qué quieres lograr exactamente?
                     Sé específico, medible, alcanzable, relevante y con un límite de tiempo (SMART).
                 </p>
                 <ul class="list-disc list-inside mt-4 space-y-2">
-                    <li class="text-gray-700 dark:text-gray-300"><strong>Específico:</strong> Define tu objetivo lo más detalladamente posible.</li>
-                    <li class="text-gray-700 dark:text-gray-300"><strong>Medible:</strong> Establece criterios concretos para medir tu progreso.</li>
-                    <li class="text-gray-700 dark:text-gray-300"><strong>Alcanzable:</strong> Asegúrate de que tu objetivo sea realista y posible de lograr.</li>
-                    <li class="text-gray-700 dark:text-gray-300"><strong>Relevante:</strong> Confirma que tu objetivo es importante para ti y se alinea con tus valores.</li>
-                    <li class="text-gray-700 dark:text-gray-300"><strong>Con Límite de Tiempo:</strong> Fija una fecha límite para mantenerte enfocado y motivado.</li>
+                    <li class="text-gray-300"><strong>Específico:</strong> Define tu objetivo lo más detalladamente posible.</li>
+                    <li class="text-gray-300"><strong>Medible:</strong> Establece criterios concretos para medir tu progreso.</li>
+                    <li class="text-gray-300"><strong>Alcanzable:</strong> Asegúrate de que tu objetivo sea realista y posible de lograr.</li>
+                    <li class="text-gray-300"><strong>Relevante:</strong> Confirma que tu objetivo es importante para ti y se alinea con tus valores.</li>
+                    <li class="text-gray-300"><strong>Con Límite de Tiempo:</strong> Fija una fecha límite para mantenerte enfocado y motivado.</li>
                 </ul>
             </div>
         </div>
@@ -169,20 +158,20 @@
                 const paso = this.dataset.paso;
                 actualizarContenido(paso);
                 // Remove active class from all buttons
-                pasosBtn.forEach(btn => btn.classList.remove('bg-blue-500', 'text-white', 'dark:bg-blue-400', 'dark:text-white'));
+                pasosBtn.forEach(btn => btn.classList.remove('active'));
                 // Add active class to the clicked button
-                this.classList.add('bg-blue-500', 'text-white', 'dark:bg-blue-400', 'dark:text-white');
+                this.classList.add('active');
             });
         });
 
         function actualizarContenido(paso) {
             const pasoData = contenidoPasos[paso];
-            let detallesHTML = pasoData.detalles.map(detalle => `<li class="text-gray-700 dark:text-gray-300">${detalle}</li>`).join('');
+            let detallesHTML = pasoData.detalles.map(detalle => `<li class="text-gray-300"><strong>${detalle.substring(0, detalle.indexOf(':'))}</strong>${detalle.substring(detalle.indexOf(':'))}</li>`).join('');
 
             contenidoPaso.innerHTML = `
-                <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">${pasoData.titulo}</h2>
-                <p class="text-gray-700 dark:text-gray-300">${pasoData.descripcion}</p>
-                <ul class="list-disc list-inside mt-4 space-y-2">
+                <h2 class="text-xl font-semibold text-white mb-4">${pasoData.titulo}</h2>
+                <p class="text-gray-300">${pasoData.descripcion}</p>
+                <ul class="mt-4 space-y-2">
                     ${detallesHTML}
                 </ul>
             `;
@@ -190,7 +179,7 @@
 
         // Inicializar el contenido del primer paso al cargar la página
         actualizarContenido(1);
-        pasosBtn[0].classList.add('bg-blue-500', 'text-white', 'dark:bg-blue-400', 'dark:text-white');
+        pasosBtn[0].classList.add('active');
     </script>
 </body>
 </html>
