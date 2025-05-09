@@ -24,6 +24,10 @@
             border: 1px solid rgba(255, 255, 255, 0.2); /* Borde blanco muy suave */
             backdrop-filter: blur(10px);
             font-size: 1rem;
+            min-width: 48px; /* Asegura un ancho mínimo para los números */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .paso-btn:hover {
@@ -80,10 +84,10 @@
     <div class="max-w-3xl w-full">
         <div class="bg-black/70 rounded-lg shadow-md p-8 backdrop-blur-md border border-white/10">
             <div class="flex justify-center gap-4 mb-6">
-                <button class="paso-btn" data-paso="1">Paso 1</button>
-                <button class="paso-btn" data-paso="2">Paso 2</button>
-                <button class="paso-btn" data-paso="3">Paso 3</button>
-                <button class="paso-btn" data-paso="4">Paso 4</button>
+                <button class="paso-btn" data-paso="1">1</button>
+                <button class="paso-btn" data-paso="2">2</button>
+                <button class="paso-btn" data-paso="3">3</button>
+                <button class="paso-btn" data-paso="4">4</button>
             </div>
             <div id="contenido-paso">
                 <h2 class="text-xl font-semibold text-white mb-4">Paso 1: Define tu Objetivo</h2>
