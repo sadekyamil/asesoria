@@ -26,12 +26,16 @@
         }
 
         .contenedor-tarjetas {
-            height: 80vh;
-            width: 120vh;
+            height: 100%;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
             align-content: stretch;
             justify-content: space-around;
+        }
+        elcontenedor{
+            height:80vh;
+            widht:100vh;
         }
 
         body {
@@ -40,15 +44,17 @@
     </style>
 </head>
 <body class="font-sans antialiased">
-    <div class="contenedor-tarjetas">
-        <div class="tarjeta tarjeta-1" onclick="redirigir('youtube.html')">Tarjeta 1</div>
-        <div class="tarjeta tarjeta-2" onclick="redirigir('youtube.html')">Tarjeta 2</div>
-        <div class="tarjeta tarjeta-3" onclick="redirigir('youtube.html')">Tarjeta 3</div>
-        <div class="tarjeta tarjeta-4" onclick="redirigir('youtube.html')">Tarjeta 4</div>
-        <div class="tarjeta tarjeta-5" onclick="redirigir('youtube.html')">Tarjeta 5</div>
-        <div class="tarjeta tarjeta-6" onclick="redirigir('youtube.html')">Tarjeta 6</div>
-        <div class="tarjeta tarjeta-7" onclick="redirigir('youtube.html')">Tarjeta 7</div>
-        <div class="tarjeta tarjeta-8" onclick="redirigir('youtube.html')">Tarjeta 8</div>
+    <div class="elcontenedor">
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta tarjeta-1" onclick="redirigir('youtube.html')">Tarjeta 1</div>
+            <div class="tarjeta tarjeta-2" onclick="redirigir('youtube.html')">Tarjeta 2</div>
+            <div class="tarjeta tarjeta-3" onclick="redirigir('youtube.html')">Tarjeta 3</div>
+            <div class="tarjeta tarjeta-4" onclick="redirigir('youtube.html')">Tarjeta 4</div>
+            <div class="tarjeta tarjeta-5" onclick="redirigir('youtube.html')">Tarjeta 5</div>
+            <div class="tarjeta tarjeta-6" onclick="redirigir('youtube.html')">Tarjeta 6</div>
+            <div class="tarjeta tarjeta-7" onclick="redirigir('youtube.html')">Tarjeta 7</div>
+            <div class="tarjeta tarjeta-8" onclick="redirigir('youtube.html')">Tarjeta 8</div>
+        </div>
     </div>
 
     <script>
