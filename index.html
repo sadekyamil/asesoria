@@ -24,6 +24,19 @@
             height: 100vh; /* Ocupa el 100% del alto del viewport */
             display: block; /* Asegura que no haya espacio extra debajo del iframe */
         }
+
+        /* Estilos para la capa de superposición transparente */
+        .overlay {
+            position: absolute; /* Posiciona la capa de forma absoluta */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ocupa todo el ancho del contenedor padre */
+            height: 100%; /* Ocupa todo el alto del contenedor padre */
+            z-index: 10; /* Asegura que esté por encima del iframe */
+            background-color: transparent; /* Hazla completamente transparente */
+            /* Puedes usar background-color: rgba(0, 0, 0, 0.1); si quieres una capa ligeramente visible */
+            /* pointer-events: auto; /* Predeterminado, asegura que capture los eventos del ratón */
+        }
     </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center">
@@ -38,6 +51,9 @@
             sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             allowfullscreen>
         </iframe>
+        <!-- Capa de superposición transparente para bloquear interacciones -->
+        <!-- Esta capa captura todos los clics y eventos del ratón, impidiendo que lleguen al iframe. -->
+        <div class="overlay"></div>
     </div>
 
     <script>
