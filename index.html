@@ -25,17 +25,22 @@
             display: block; /* Asegura que no haya espacio extra debajo del iframe */
         }
 
-        /* Estilos para la capa de superposición transparente */
-        .overlay {
-            position: absolute; /* Posiciona la capa de forma absoluta */
-            top: 0;
-            left: 0;
-            width: 100%; /* Ocupa todo el ancho del contenedor padre */
-            height: 100%; /* Ocupa todo el alto del contenedor padre */
+        /* Estilos para la capa de superposición específica del logo */
+        .logo-overlay {
+            position: absolute; /* Posiciona la capa de forma absoluta dentro del contenedor .relative */
+            /*
+             * AQUI DEBES AJUSTAR ESTOS VALORES MANUALMENTE
+             * Estos valores son estimaciones para la posición y tamaño del logo.
+             * Experimenta con 'top', 'left', 'width' y 'height' para que cubran el logo.
+             */
+            top: 10px;    /* Distancia desde la parte superior */
+            left: 10px;   /* Distancia desde la izquierda */
+            width: 200px; /* Ancho estimado del logo. Ajusta según sea necesario. */
+            height: 50px; /* Alto estimado del logo. Ajusta según sea necesario. */
             z-index: 10; /* Asegura que esté por encima del iframe */
             background-color: transparent; /* Hazla completamente transparente */
-            /* Puedes usar background-color: rgba(0, 0, 0, 0.1); si quieres una capa ligeramente visible */
-            /* pointer-events: auto; /* Predeterminado, asegura que capture los eventos del ratón */
+            /* Si quieres ver la capa mientras ajustas, puedes poner
+               background-color: rgba(255, 0, 0, 0.3); */
         }
     </style>
 </head>
@@ -51,9 +56,9 @@
             sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             allowfullscreen>
         </iframe>
-        <!-- Capa de superposición transparente para bloquear interacciones -->
-        <!-- Esta capa captura todos los clics y eventos del ratón, impidiendo que lleguen al iframe. -->
-        <div class="overlay"></div>
+        <!-- Capa de superposición transparente SOLO para el área del logo -->
+        <!-- Esta capa capturará los clics en el área donde se presume está el logo. -->
+        <div class="logo-overlay"></div>
     </div>
 
     <script>
